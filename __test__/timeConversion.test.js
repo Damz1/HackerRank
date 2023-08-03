@@ -20,3 +20,18 @@ describe("timeConversion PM", () => {
     expect(timeConversion(input)).toBe(output);
   });
 });
+
+describe("timeConversion AM", () => {
+  test("should return correct for 7AM", () => {
+    const input = "07:13:32AM";
+    const output = "07:13:32";
+
+    expect(timeConversion(input)).toBe(output);
+  });
+  test("should return correct for 12AM", () => {
+    const input = "12:03:02AM";
+    const output = "00:03:02";
+
+    expect(timeConversion(input)).toBe(output);
+  });
+});

@@ -5,15 +5,22 @@
 
 const timeConversion = (time) => {
   let ampm = time.slice(-2).toLowerCase();
-  let hour = Number(time.slice(0, 2));
+  let hour = time.slice(0, 2);
   let minutes = time.slice(3, 5);
   let seconds = time.slice(6, 8);
 
   if (ampm === "pm" && hour < 12) {
+    hour = Number(hour);
     hour += 12;
-    return `${hour.toString()}:${minutes.toString()}:${seconds.toString()}`;
-  } else if (ampm === "pm" && hour === 12) {
-    return `${hour.toString()}:${minutes.toString()}:${seconds.toString()}`;
+    return `${hour}:${minutes}:${seconds}`;
+  } else if (ampm === "pm" && hour === "12") {
+    return `${hour}:${minutes}:${seconds}`;
+  } else if (ampm === "am" && hour < 12) {
+    return `${hour}:${minutes}:${seconds}`;
+  } else if (ampm === "am" && hour === "12") {
+    hour = Number(hour);
+    hour -= 12;
+    return `0${hour}:${minutes}:${seconds}`;
   }
 };
 
