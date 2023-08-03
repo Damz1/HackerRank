@@ -6,18 +6,14 @@
 const timeConversion = (time) => {
   let ampm = time.slice(-2).toLowerCase();
   let hour = Number(time.slice(0, 2));
-  let minutes = Number(time.slice(3, 5));
-  let seconds = Number(time.slice(6, 8));
+  let minutes = time.slice(3, 5);
+  let seconds = time.slice(6, 8);
 
   if (ampm === "pm" && hour < 12) {
     hour += 12;
-    return `${hour.toString()}:${minutes
-      .toString()
-      .padStart(2, "0")}:${seconds.toString()}`;
+    return `${hour.toString()}:${minutes.toString()}:${seconds.toString()}`;
   } else if (ampm === "pm" && hour === 12) {
-    return `${hour.toString()}:${minutes
-      .toString()
-      .padStart(2, "0")}:${seconds.toString()}`;
+    return `${hour.toString()}:${minutes.toString()}:${seconds.toString()}`;
   }
 };
 

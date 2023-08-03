@@ -13,4 +13,10 @@ describe("timeConversion PM", () => {
 
     expect(timeConversion(input)).toBe(output);
   });
+  test("should return 1 PM correctly", () => {
+    const input = "01:27:25PM";
+    const output = "13:27:25";
+
+    expect(timeConversion(input)).toBe(output);
+  });
 });
