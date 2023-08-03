@@ -19,9 +19,9 @@ function plusMinus(arr) {
 
   let total = arr.length;
   return {
-    positiveRatio: plusCount / total,
-    negativeRatio: minusCount / total,
-    zeroRatio: zeroCount / total,
+    positiveRatio: total ? plusCount / total : 0,
+    negativeRatio: total ? minusCount / total : 0,
+    zeroRatio: total ? zeroCount / total : 0,
   };
 }
 
