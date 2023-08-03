@@ -1,4 +1,4 @@
-const plusMinus = require("../plusMinus");
+import { plusMinus } from "../plusMinus";
 
 describe("plusMinus", () => {
   test("should return correct ratios when given 1 number", () => {

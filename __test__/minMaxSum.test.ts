@@ -1,4 +1,4 @@
-const minMaxSum = require("../minMaxSum");
+import { minMaxSum } from "../minMaxSum";
 
 describe("minMaxSum", () => {
   test("should return correct for [1,2,3,4,5]", () => {

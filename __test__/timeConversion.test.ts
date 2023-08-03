@@ -1,4 +1,4 @@
-const timeConversion = require("../timeConversion");
+import { timeConversion } from "../timeConversion";
 
 describe("timeConversion PM", () => {
   test("should return 7 PM correctly", () => {
