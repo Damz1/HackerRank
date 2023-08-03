@@ -4,6 +4,11 @@
 // - 12:00:00PM on a 12-hour clock is 12:00:00 on a 24-hour clock.
 
 const timeConversion = (time) => {
+  const timeRegex = /^(0?[1-9]|1[012]):[0-5][0-9]:[0-5][0-9](AM|PM)$/;
+  if (!timeRegex.test(time)) {
+    throw new Error("Invalid time format");
+  }
+
   let ampm = time.slice(-2).toLowerCase();
   let hour = time.slice(0, 2);
   let minutes = time.slice(3, 5);
