@@ -9,8 +9,12 @@ const timeConversion = (time) => {
   let minutes = Number(time.slice(3, 5));
   let seconds = Number(time.slice(6, 8));
 
-  if (ampm === "pm") {
+  if (ampm === "pm" && hour < 12) {
     hour += 12;
+    return `${hour.toString()}:${minutes
+      .toString()
+      .padStart(2, "0")}:${seconds.toString()}`;
+  } else if (ampm === "pm" && hour === 12) {
     return `${hour.toString()}:${minutes
       .toString()
       .padStart(2, "0")}:${seconds.toString()}`;
