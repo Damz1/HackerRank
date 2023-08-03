@@ -1,5 +1,5 @@
 /*
-Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. Print the decimal value of each fraction on a new line with  places after the decimal.
+Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. return the decimal value of each fraction on a new line with 6 places after the decimal.
 */
 
 function plusMinus(arr) {
@@ -19,9 +19,9 @@ function plusMinus(arr) {
 
   let total = arr.length;
   return {
-    positiveRatio: total ? plusCount / total : 0,
-    negativeRatio: total ? minusCount / total : 0,
-    zeroRatio: total ? zeroCount / total : 0,
+    positiveRatio: total ? (plusCount / total).toFixed(6) : "0.000000",
+    negativeRatio: total ? (minusCount / total).toFixed(6) : "0.000000",
+    zeroRatio: total ? (zeroCount / total).toFixed(6) : "0.000000",
   };
 }
 
