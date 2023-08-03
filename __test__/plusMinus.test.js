@@ -15,4 +15,10 @@ describe("plusMinus", () => {
       zeroRatio: 2 / 7,
     });
   });
+  test("should return correct ratios when given an array of only positive numbers", () => {
+    const result = plusMinus([3, 5, 1, 8, 4]);
+    expect(result.positiveRatio).toBe(1);
+    expect(result.negativeRatio).toBe(0);
+    expect(result.zeroRatio).toBe(0);
+  });
 });
