@@ -5,7 +5,7 @@ describe("diagonal difference", () => {
     const input = [
       [1, 2, 3],
       [4, 5, 6],
-      [7, 8, 9],
+      [9, 8, 9],
     ];
     const output = 2;
     expect(diagonalDifference(input)).toBe(output);
