@@ -1,4 +1,8 @@
 export const countingSort = (arr: number[]): number[] => {
+  if (arr.length === 0) {
+    return [];
+  }
+
   // find the maximum value
   let maxVal = Math.max(...arr);
 
