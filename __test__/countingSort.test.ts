@@ -8,6 +8,7 @@ describe("countingSort", () => {
   });
   test("should sort empty or arrays of 1 corretly", () => {
     expect(countingSort([1])).toEqual([1]);
+    expect(countingSort([])).toEqual([]);
   });
   test("should handle arrays with a mix of large and small numbers", () => {
     expect(countingSort([100, 1, 5, 0, 10])).toEqual([0, 1, 5, 10, 100]);
